@@ -11,9 +11,9 @@ files and the full Git history and hides any matched value from its output.
 
 ## Reporting a vulnerability
 
-Do not open a public issue for an unpatched vulnerability. Repository
-collaborators should create a private draft advisory under **Security →
-Advisories**. If this repository becomes public, enable GitHub private
-vulnerability reporting before launch so external reporters have a confidential
-channel. Include affected versions, reproduction steps, impact, and any suggested
-fix. Expect acknowledgement within five business days.
+Do not open a public issue for an unpatched vulnerability. External reporters
+should use **Security → Report a vulnerability**; GitHub private vulnerability
+reporting is enabled. Repository collaborators may create a private draft
+advisory under **Security → Advisories**. Include affected versions, reproduction
+steps, impact, and any suggested fix. Expect acknowledgement within five business
+days.
