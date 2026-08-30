@@ -1,0 +1,53 @@
+{
+  "suite": "support-triage-v1",
+  "cases": [
+    {
+      "id": "billing-refund",
+      "input": {
+        "subject": "Duplicate charge",
+        "body": "I was billed twice for order EXAMPLE-1042."
+      },
+      "actual": {
+        "category": "billing",
+        "priority": "high",
+        "draft": "We will review the duplicate charge before taking any account action.",
+        "citations": [
+          {
+            "id": "refund-policy-v2"
+          }
+        ]
+      },
+      "metrics": {
+        "latency_ms": 438,
+        "cost_usd": 0.0031
+      },
+      "assert": {
+        "required": [
+          "category",
+          "priority",
+          "draft",
+          "citations.0.id"
+        ],
+        "equals": {
+          "category": "billing",
+          "priority": "high"
+        },
+        "contains": {
+          "draft": [
+            "review",
+            "before"
+          ]
+        },
+        "matches": {
+          "citations.0.id": "^refund-policy-"
+        },
+        "forbidden": [
+          "(?i)password",
+          "sk-[A-Za-z0-9]{12,}"
+        ],
+        "max_latency_ms": 750,
+        "max_cost_usd": 0.01
+      }
+    }
+  ]
+}

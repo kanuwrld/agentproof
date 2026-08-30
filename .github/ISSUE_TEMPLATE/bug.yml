@@ -1,0 +1,18 @@
+name: Bug report
+description: Report a reproducible AgentProof problem
+title: "bug: "
+labels: [bug]
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Use fictional or sanitized suite data only.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AgentProof and Python versions
+    validations:
+      required: true
